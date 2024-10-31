@@ -41,7 +41,7 @@ const Header = () => {
                     <ShieldIcon className="size-4 shrink-0" />
                     <p className="ml-2">View Usage</p>
                 </button>
-                <Avatar src="https://github.com/shadcn.png" alt="Shadcn" fallback="CN" />
+                <Avatar src="https://github.com/shadcn.png" alt="Shadcn" fallback="CN" className="cursor-pointer" />
             </div>
         </div>
     );

@@ -6,14 +6,15 @@ import {
 
 interface Props {
     src?: string,
+    className?: string,
     alt: string,
     fallback: string
 }
 
-const Avatar: React.FC<Props> = ({ src, alt, fallback }) => {
+const Avatar: React.FC<Props> = ({ src, alt, fallback, className }) => {
 
     return (
-        <AvatarPrimitive>
+        <AvatarPrimitive className={className}>
             <AvatarImage src={src} alt={alt} />
             <AvatarFallback>{fallback}</AvatarFallback>
         </AvatarPrimitive>
