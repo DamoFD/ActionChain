@@ -20,7 +20,7 @@ const Header = () => {
     ];
 
     return (
-        <div className="w-[calc(100%-9rem)] mx-auto h-16 border-b border-gray-300 flex items-center justify-between">
+        <div className="w-full h-16 border-b border-gray-300 flex items-center justify-between">
             <ComboBox projects={projects} />
             <div className="flex items-center space-x-4">
                 <button
