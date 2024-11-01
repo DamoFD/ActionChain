@@ -1,5 +1,7 @@
-import { Import, LayoutTemplate, Plus } from "lucide-react";
-import Dropdown from "./Dropdown";
+import { Import, LayoutTemplate, Plus } from 'lucide-react';
+import Dropdown from './Dropdown';
+import Folders from './Folders';
+import Table from './Table';
 
 const Actions = () => {
 
@@ -12,10 +14,23 @@ const Actions = () => {
             label: 'Import Action',
             icon:  LayoutTemplate
         }
+    ];
+
+    const folderItems = [
+        {
+            id: 1,
+            label: 'All Actions',
+            amount: 1,
+        },
+        {
+            id: 2,
+            label: 'Uncategorized',
+            amount: 1,
+        },
     ]
 
     return (
-        <div className="mt-10">
+        <div className="mt-10 w-full">
 
             {/* Header */}
             <div className="flex justify-between items-center">
@@ -33,8 +48,13 @@ const Actions = () => {
             {/* /Header */}
 
             {/* Content */}
-            <div>
-                //
+            <div className="flex w-full space-x-8 mt-10">
+                {/* Folders */}
+                <Folders folders={folderItems} />
+                {/* /Folders */}
+                {/* Table */}
+                <Table />
+                {/* /Table */}
             </div>
             {/* /Content */}
         </div>

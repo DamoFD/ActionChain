@@ -1,6 +1,6 @@
 import Sidebar from "../components/Sidebar";
 import Header from "../components/Header";
-import Actions from "../components/Actions";
+import { Outlet } from "react-router-dom";
 
 const MainLayout = () => {
 
@@ -9,7 +9,7 @@ const MainLayout = () => {
             <Sidebar />
             <div className="flex flex-col w-[calc(100%-9rem)] mx-auto">
                 <Header />
-                <Actions />
+                <Outlet />
             </div>
         </div>
     );
