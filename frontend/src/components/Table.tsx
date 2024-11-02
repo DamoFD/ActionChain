@@ -27,37 +27,8 @@ import {
     TableRow,
 } from '@/components/ui/table';
 import { useState } from 'react';
-import { columns } from '@/config/actionColumns';
 
-interface Action {
-    id: string
-    name: string
-    folder: string
-    status: boolean
-}
-
-const data: Action[] = [
-    {
-        id: "1",
-        name: "Action 1",
-        folder: "Uncategorized",
-        status: true
-    },
-    {
-        id: "2",
-        name: "Action 2",
-        folder: "Uncategorized",
-        status: true
-    },
-    {
-        id: "3",
-        name: "Action 3",
-        folder: "Uncategorized",
-        status: false
-    },
-]
-
-const Table = () => {
+const Table = ({columns, data}: {columns: any, data: any}) => {
 
     const [sorting, setSorting] = useState<SortingState>([]);
     const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);

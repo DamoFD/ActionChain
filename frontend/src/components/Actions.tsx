@@ -2,6 +2,35 @@ import { Import, LayoutTemplate, Plus } from 'lucide-react';
 import Dropdown from './Dropdown';
 import Folders from './Folders';
 import Table from './Table';
+import { columns } from '@/config/actionColumns';
+
+interface Action {
+    id: string
+    name: string
+    folder: string
+    status: boolean
+}
+
+const data: Action[] = [
+    {
+        id: "1",
+        name: "Action 1",
+        folder: "Uncategorized",
+        status: true
+    },
+    {
+        id: "2",
+        name: "Action 2",
+        folder: "Uncategorized",
+        status: true
+    },
+    {
+        id: "3",
+        name: "Action 3",
+        folder: "Uncategorized",
+        status: false
+    },
+]
 
 const Actions = () => {
 
@@ -53,7 +82,7 @@ const Actions = () => {
                 <Folders folders={folderItems} />
                 {/* /Folders */}
                 {/* Table */}
-                <Table />
+                <Table data={data} columns={columns} />
                 {/* /Table */}
             </div>
             {/* /Content */}
